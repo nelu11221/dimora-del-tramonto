@@ -1051,12 +1051,17 @@ function App() {
           </div>
 
           <div className="location-map">
-            <div className="map-placeholder">
-              <div className="map-overlay">
-                <span className="map-icon">📍</span>
-                <h3>Toscana, Italia</h3>
-                <p>Chianti Classico Region</p>
-              </div>
+            <div className="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92685.41424894938!2d11.273614869999999!3d43.5398092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a4f0f56b8e82f%3A0x40a5f8e2b88f6e0!2sChianti%2C%20Province%20of%20Florence%2C%20Italy!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Dimora del Tramonto Location"
+              ></iframe>
             </div>
           </div>
         </div>
@@ -1242,19 +1247,19 @@ function App() {
                 {t('footerBrandDesc')}
               </p>
               <div className="footer-socials">
-                <a href="#" className="social-link" aria-label="Instagram">
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="2"/>
                     <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2"/>
                     <circle cx="18" cy="6" r="1" fill="currentColor"/>
                   </svg>
                 </a>
-                <a href="#" className="social-link" aria-label="Facebook">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </a>
-                <a href="#" className="social-link" aria-label="Email">
+                <a href="mailto:info@dimoradeltramonto.com" className="social-link" aria-label="Email">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" strokeWidth="2"/>
                     <path d="M22 6l-10 7L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
@@ -1317,9 +1322,9 @@ function App() {
           <div className="footer-bottom">
             <p>&copy; 2024 Dimora del Tramonto. {t('footerRights')}</p>
             <div className="footer-legal">
-              <a href="#privacy">{t('footerPrivacy')}</a>
+              <a href="#privacy" onClick={(e) => e.preventDefault()}>{t('footerPrivacy')}</a>
               <span>·</span>
-              <a href="#terms">{t('footerTerms')}</a>
+              <a href="#terms" onClick={(e) => e.preventDefault()}>{t('footerTerms')}</a>
             </div>
           </div>
         </div>
@@ -1474,7 +1479,7 @@ function App() {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/xNpJdqLb9wY?autoplay=1&rel=0&modestbranding=1&enablejsapi=1"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0&modestbranding=1&enablejsapi=1"
                 title="Virtual Tour - Dimora del Tramonto"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
