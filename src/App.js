@@ -249,16 +249,20 @@ function App() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Update review slider with scroll
+  // Update review slider with scroll - only on user interaction, not on mount
+  const isFirstRender = React.useRef(true);
   useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
     const reviewsGrid = document.querySelector('.reviews-grid');
     if (reviewsGrid && window.innerWidth <= 768) {
       const cards = reviewsGrid.querySelectorAll('.review-card');
       if (cards[currentReview]) {
-        cards[currentReview].scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
-          inline: 'center'
+        reviewsGrid.scrollTo({
+          left: cards[currentReview].offsetLeft - (window.innerWidth - cards[currentReview].offsetWidth) / 2,
+          behavior: 'smooth'
         });
       }
     }
@@ -1479,7 +1483,7 @@ function App() {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/xNpJdqLb9wY?autoplay=1&rel=0&modestbranding=1&enablejsapi=1"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0&modestbranding=1&enablejsapi=1"
                 title="Virtual Tour - Dimora del Tramonto"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
