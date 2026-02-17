@@ -994,9 +994,10 @@ body {
     display: flex !important;
     overflow-x: scroll;
     overflow-y: hidden;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x proximity;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
     scrollbar-width: none;
     -ms-overflow-style: none;
     padding: 0;
@@ -1012,7 +1013,7 @@ body {
   }
 
   .review-card {
-    scroll-snap-align: center;
+    scroll-snap-align: start;
     flex: 0 0 85vw;
     max-width: 340px;
     width: 85vw;
