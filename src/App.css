@@ -42,6 +42,7 @@
 
 html {
   overflow-x: hidden;
+  height: -webkit-fill-available;
 }
 
 body {
@@ -878,6 +879,9 @@ body {
 
   .hero {
     padding: 7rem 1.5rem 3rem;
+    background-attachment: scroll; /* Fix for iOS Safari - fixed attachment breaks background images */
+    min-height: 100vh;
+    min-height: -webkit-fill-available; /* Fix for iOS Safari 100vh issue */
   }
   
   .hero-title {
