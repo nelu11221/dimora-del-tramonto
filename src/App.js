@@ -1057,7 +1057,7 @@ function App() {
           <div className="location-map">
             <div className="map-container">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92685.41424894938!2d11.273614869999999!3d43.5398092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a4f0f56b8e82f%3A0x40a5f8e2b88f6e0!2sChianti%2C%20Province%20of%20Florence%2C%20Italy!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.930944004743!2d11.090328200000002!3d43.73276140000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5b6c6609c999%3A0x8290ef5a0c8e1eef!2zVmlhIGRlbCBQb2xsYWlvbG8sIDQ4L0EsIDUwMDU1IExhc3RyYSBhIFNpZ25hIEZJLCDQmNGC0LDQu9C40Y8!5e0!3m2!1sru!2s!4v1771766570558!5m2!1sru!2s"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
